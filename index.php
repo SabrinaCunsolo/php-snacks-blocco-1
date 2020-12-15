@@ -47,10 +47,7 @@ Nome repo: php-snacks-blocco-1 -->
     ];
 ?>
 
-stampo le partite utilizzando questo schema:
-[squadra di casa] - [squadra ospite] | [punti squadra di casa] - [punti squadra ospite]
-ad esempio:
-Olimpia Milano - Cantù | 55 - 60
+<!-- stampo le partite concatenando i dati da inserire -->
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -59,6 +56,13 @@ Olimpia Milano - Cantù | 55 - 60
         <title>PHP Snack1</title>
     </head>
     <body>
-
+        <h2>Partite di Basket:</h2>
+        <h4>
+            <?php
+                foreach ($matches as $partita) {
+                    echo $partita ['squadra_di_casa'] . ' - ' . $partita ['squadra_ospite'] . ' | ' . $partita ['punti_squadra_di_casa'] . ' - ' . $partita ['punti_squadra_ospite'] . '<pre></pre>' . '<br>';
+                };
+            ?>
+        </h4>
     </body>
 </html>
