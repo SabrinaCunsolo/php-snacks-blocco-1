@@ -60,9 +60,9 @@ Nome repo: php-snacks-blocco-1 -->
         <h4>
             <?php
                 foreach ($matches as $partita) {
-                    // echo $partita ['squadra_di_casa'] . ' - ' . $partita ['squadra_ospite'] . ' | ' . $partita ['punti_squadra_di_casa'] . ' - ' . $partita ['punti_squadra_ospite'] . '<pre></pre>' . '<br>';
+                    echo $partita ['squadra_di_casa'] . ' - ' . $partita ['squadra_ospite'] . ' | ' . $partita ['punti_squadra_di_casa'] . ' - ' . $partita ['punti_squadra_ospite'] . '<pre></pre>' . '<br>';
 
-                    var_dump ($partita ['squadra_di_casa'] . ' - ' . $partita ['squadra_ospite'] . ' | ' . $partita ['punti_squadra_di_casa'] . ' - ' . $partita ['punti_squadra_ospite'] . '<pre></pre>' . '<br>');
+                    // var_dump ($partita ['squadra_di_casa'] . ' - ' . $partita ['squadra_ospite'] . ' | ' . $partita ['punti_squadra_di_casa'] . ' - ' . $partita ['punti_squadra_ospite'] . '<pre></pre>' . '<br>');
                 };
             ?>
         </h4>

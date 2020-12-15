@@ -19,7 +19,7 @@ $mailOk = strpos ($mail, '.') !== false && strpos ($mail, '@') !== false;
 $ageOk = is_numeric ($age);
 
 //se verifiche -> ok, stampare accesso riuscito
-if ($nomeOk) {
+if ($nomeOk && $mailOk && $ageOk) {
     echo "Accesso riuscito";
 //se verifiche -> ko, stampare accesso negato
 } else {
