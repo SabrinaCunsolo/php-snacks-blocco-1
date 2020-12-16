@@ -7,22 +7,36 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 
 <?php
 // creo tre param get
-$name = $_GET ['Name'];
-$mail = $_GET ['Mail'];
-$age = $_GET ['Age'];
+$name = $_GET ['name'];
+$mail = $_GET ['mail'];
+$age = $_GET ['age'];
 
 //name > di 3 caratteri - strlen ritorna lungh stringa
 $nomeOk = strlen ($name) > 3;
 //mail deve contenere . e @ - strpos cerca stringa dentro stringa e ritorna posiz
 $mailOk = strpos ($mail, '.') !== false && strpos ($mail, '@') !== false;
 //age deve essere un numero - is_numeric trova se una variabile è un numero o una stringa numerica
-$ageOk = is_numeric ($age);
+$ageOk = (is_numeric ($age) && $age > 0 && $age < 120);
 
-//se verifiche -> ok, stampare accesso riuscito
-if ($nomeOk && $mailOk && $ageOk) {
-    echo "Accesso riuscito";
-//se verifiche -> ko, stampare accesso negato
-} else {
-    echo "Accesso negato";
-};
 ?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>PHP Snack2</title>
+    </head>
+    <body>
+        <h1>
+            <?php
+                //se verifiche -> ok, stampare accesso riuscito
+                if ($nomeOk && $mailOk && $ageOk) {
+                    echo "Accesso riuscito";
+                //se verifiche -> ko, stampare accesso negato
+                } else {
+                    echo "Accesso negato";
+                };
+            ?>
+        </h1>
+    </body>
+</html>

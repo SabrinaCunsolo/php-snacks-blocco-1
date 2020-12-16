@@ -45,6 +45,7 @@ Nome repo: php-snacks-blocco-1 -->
             'punti_squadra_ospite' => 61,
         ],
     ];
+
 ?>
 
 <!-- stampo le partite concatenando i dati da inserire -->
@@ -58,13 +59,21 @@ Nome repo: php-snacks-blocco-1 -->
     <body>
         <h2>Partite di Basket:</h2>
         <h4>
+            <ul>
+
+
             <?php
                 foreach ($matches as $partita) {
-                    echo $partita ['squadra_di_casa'] . ' - ' . $partita ['squadra_ospite'] . ' | ' . $partita ['punti_squadra_di_casa'] . ' - ' . $partita ['punti_squadra_ospite'] . '<pre></pre>' . '<br>';
-
-                    // var_dump ($partita ['squadra_di_casa'] . ' - ' . $partita ['squadra_ospite'] . ' | ' . $partita ['punti_squadra_di_casa'] . ' - ' . $partita ['punti_squadra_ospite'] . '<pre></pre>' . '<br>');
-                };
             ?>
+                    <li>
+                    <?php
+                        echo $partita ['squadra_di_casa'] . ' - ' . $partita ['squadra_ospite'] . ' | ' . $partita ['punti_squadra_di_casa'] . ' - ' . $partita ['punti_squadra_ospite'] . '<pre></pre>' . '<br>';
+                    ?>
+                    </li>
+                <?php
+                };
+                ?>
+            </ul>
         </h4>
     </body>
 </html>
